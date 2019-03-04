@@ -1,1 +1,2 @@
 # AlgoRithm
+#DAC==DIVIDE AND COUNQER
