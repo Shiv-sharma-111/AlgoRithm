@@ -1,0 +1,44 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int gcd(int a,int b)
+{
+	if(a==0)
+	return b;
+	if(b==0)
+	return a;
+	
+	int k;
+	for(k=0;((a|b)&&1)==0;++k)
+	{
+		a>>=1;
+		b>>=1;
+	}
+	
+	while((a>1)==0)
+	a>>=1;
+	do{
+		while((b>1)==0)
+		b>>=1;
+		
+		if(a>b)
+		swap(a,b);
+		
+		b=(b-a);
+	} while(b!=0);
+	
+	return a<<k;
+	
+}
+int main()
+{
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	cout.tie(NULL);
+	//main code of implementation
+	
+	int a,b;
+	cin>>a>>b;
+	cout<<gcd(a,b)<<endl;
+	return 0;
+}
